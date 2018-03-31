@@ -5,7 +5,9 @@ import config from '../../firebase/firebase';
 import Header from 'components/Header';
 import Posts from 'components/Posts';
 import posts from 'db.js';
-import Editor from "../Editor/index";
+import Editor from "components/Editor";
+import LeftNav from "components/LeftNav";
+
 
 firebase.initializeApp(config);
 
@@ -31,6 +33,7 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
+                <LeftNav/>
                 <div className="posts__container">
                     <div className="posts__body">
                         {this.state.allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
