@@ -1,0 +1,31 @@
+.Header {
+    background-color: #303fa0;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Icon {
+    width: 20px;
+    position: absolute;
+    right: 80px;
+    top: 30px;
+}
+
+.Anton {
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    border-radius: 100%;
+}
+
+.Search {
+    background-color: #303fa0;
+}
+
+.Input {
+    position: absolute;
+    left: 20px;
+}

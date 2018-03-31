@@ -2,6 +2,8 @@ import React from 'react';
 import * as firebase from 'firebase';
 import './App.css';
 import Header from 'components/Header';
+import Habit from 'components/Habit/Habit';
+import Modal_habit from 'components/Habit/Modal_habit';
 import Posts from 'components/Posts';
 import { getFakePosts } from '../../firebase/postService.js';
 import Auth from "components/Auth/Auth";
@@ -46,6 +48,7 @@ export default class App extends React.Component {
           });
     }
 
+
     onAddTodo = todo => {
         this.setState({
             allPosts: [...this.state.allPosts, todo]
@@ -67,7 +70,9 @@ export default class App extends React.Component {
                 <LeftNav/>
                 <div className="posts__container">
                     <div className="posts__body">
-                        {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
+                        {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}  
+                        <Habit/>
+                        <Modal_habit/>
                     </div>
                     <Editor onFormSubmit={this.onAddTodo}/>
                 </div>

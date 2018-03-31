@@ -1,15 +1,31 @@
 import React from 'react';
-import './style.css';
+import Icon from './icon-12.svg'
+import Anton from './anton.jpg'
+import {Input} from 'react-materialize'
+import {Row} from 'react-materialize'
+import './Header.css';
 
-const Header = () => (
-    <div className="header">
-        <h1><a className="header__logo" href="">Home Cinema</a></h1>
-        <ul className="navbar">
-            <li className="navbar__list"><a href="">About</a></li>
-            <li className="navbar__list"><a href="">Browse</a></li>
-            <li className="navbar__list"><a href="">Login</a></li>
-        </ul>
-    </div>
-);
+
+
+
+const Header = () =>  {
+	
+		return(
+		<div className = 'Header'>
+			
+
+			<Row className = 'Input'>
+  <Input s={6} label="First Name" label=" &#128269; Search" />
+</Row>
+
+				<img className = 'Icon' src = {Icon} alt = '' />
+				<img className = 'Anton' src = {Anton} alt = '' />
+
+
+			
+			
+		</div>
+		)
+	}
 
 export default Header;
