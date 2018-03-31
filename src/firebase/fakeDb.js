@@ -1,6 +1,6 @@
 import v4 from 'uuid/v4';
 
-const posts = [
+export const posts = [
     {
         id: v4(),
         title: 'Погулять'
@@ -26,6 +26,3 @@ const posts = [
         title: 'Похакатонить'
     }
 ]
-
-
-export default posts;
