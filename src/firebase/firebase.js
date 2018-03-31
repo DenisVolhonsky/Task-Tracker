@@ -1,5 +1,3 @@
-import firebase from 'firebase';
-
 const config = {
 	apiKey: "AIzaSyDfoHWlitxk7OEQYs-eyF_YkKGqm_Ji7sQ",
 	authDomain: "task-tracker-c5e5e.firebaseapp.com",

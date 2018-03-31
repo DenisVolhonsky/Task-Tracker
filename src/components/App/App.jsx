@@ -1,9 +1,13 @@
 import React from 'react';
+import * as firebase from 'firebase';
 import './App.css';
+import config from '../../firebase/firebase';
 import Header from 'components/Header';
 import Posts from 'components/Posts';
 import posts from 'db.js';
 import Editor from "../Editor/index";
+
+firebase.initializeApp(config);
 
 export default class App extends React.Component {
 
