@@ -1,18 +1,39 @@
 import React from 'react';
-import firebase from 'firebase';
 import './App.css';
-import config from '../../firebase/firebase';
+import Header from 'components/Header';
+import Posts from 'components/Posts';
+import posts from 'db.js';
+import Editor from "../Editor/index";
 
-firebase.initializeApp(config);
+export default class App extends React.Component {
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
+    state = {
+        allPosts: posts
+    }
 
-			</div>
-		);
-	}
+    onAddTodo = todo => {
+        this.setState({
+            allPosts: [...this.state.allPosts, todo]
+        });
+    }
+
+    onDeleteTodo = id => {
+        this.setState({
+           allPosts: this.state.allPosts.filter(post => post.id !== id )
+        });
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <Header/>
+                <div className="posts__container">
+                    <div className="posts__body">
+                        {this.state.allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
+                    </div>
+                    <Editor onFormSubmit={this.onAddTodo}/>
+                </div>
+            </div>
+        );
+    }
 }
-
-export default App;

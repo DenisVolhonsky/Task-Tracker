@@ -1,5 +1,15 @@
-.App {
-	max-width: 1280px;
-	margin: auto;
-	padding: 0 10px;
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+.posts__container {
+    display: flex;
+}
+.posts__body {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.posts__adding {
+    width: 30%;
 }
