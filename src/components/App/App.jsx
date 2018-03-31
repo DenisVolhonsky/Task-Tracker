@@ -4,9 +4,12 @@ import './App.css';
 import Header from 'components/Header';
 import Posts from 'components/Posts';
 import { getFakePosts } from '../../firebase/postService.js';
-import Editor from "../Editor/index";
 import Auth from "components/Auth/Auth";
 import {auth} from '../../firebase/firebase-config';
+//import posts from 'db.js';
+import Editor from "components/Editor";
+import LeftNav from "components/LeftNav";
+
 
 
 const getDefaultState = () => ({
@@ -59,6 +62,7 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
+                <LeftNav/>
                 <div className="posts__container">
                     <div className="posts__body">
                         {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}

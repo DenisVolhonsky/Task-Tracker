@@ -1,0 +1,15 @@
+.LifeItem {
+    position: relative;
+    margin-bottom: 10px;
+    width: 140px;
+    border: 1px solid deeppink;
+}
+.LifeItemName {
+    border: 1px solid lime;
+}
+.LifeItemCount {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    border: 1px solid yellow;
+}
