@@ -13,7 +13,7 @@ import Editor from "components/Editor";
 import LeftNav from "components/LeftNav";
 import SignIn from 'components/SignIn';
 import Register from 'components/Register';
-
+import Enter from "../Enter/Enter";
 
 const getDefaultState = () => ({
     allPosts: getFakePosts(),
@@ -24,6 +24,8 @@ const getDefaultState = () => ({
     isLoggedIn: false,
     userId: null,
 });
+
+
 
 
 export default class App extends React.Component {
@@ -79,6 +81,7 @@ export default class App extends React.Component {
                 <Auth />
                 <SignIn/>
                 <Register/>
+                <Enter/>
             </div>
         );
     }
