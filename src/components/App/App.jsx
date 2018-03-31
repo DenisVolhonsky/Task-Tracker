@@ -4,6 +4,8 @@ import Header from 'components/Header';
 import Posts from 'components/Posts';
 import posts from 'db.js';
 import Editor from "../Editor/index";
+import SignIn from 'components/SignIn';
+import Register from 'components/Register';
 
 export default class App extends React.Component {
 
@@ -27,12 +29,8 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
-                <div className="posts__container">
-                    <div className="posts__body">
-                        {this.state.allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
-                    </div>
-                    <Editor onFormSubmit={this.onAddTodo}/>
-                </div>
+                <SignIn/>
+                <Register/>
             </div>
         );
     }

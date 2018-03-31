@@ -1,0 +1,58 @@
+body {
+	background-color: #f1f2f2;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.blueColorBg {
+	background-color: #303fa0;  
+}
+
+.blueColor {
+	color:#303fa0;  
+}
+
+.orangeColorBg {
+	background-color: #ff5722; 
+}
+
+.orangeColor {
+	color: #ff5722; 
+}
+
+.form {
+	background-color: #fff;
+	margin: 10% auto;
+	width: 90%;
+	max-width: 400px;
+	padding: 20px;
+	-webkit-box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
+	-moz-box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
+	box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
+}
+
+.form p {
+	padding:0 .75rem;
+	font-weight: bold;
+	font-size:18px;
+}
+
+.btn {
+	position:static;
+	margin: 0 auto;
+	display: block;	
+
+}
+
+.btn:hover {
+	background-color: #a02801;
+}
+
+/*$darkGreyColor:#c5cae9; 
+$lightGreyColor:#cbcbcb;  
+$bgColor:#f1f2f2; */
