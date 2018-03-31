@@ -1,17 +1,44 @@
 import React from 'react';
 import * as firebase from 'firebase';
 import './App.css';
-import config from '../../firebase/firebase';
 import Header from 'components/Header';
 import Posts from 'components/Posts';
-import posts from 'db.js';
+import { getFakePosts } from '../../firebase/postService.js';
 import Editor from "../Editor/index";
+import Auth from "components/Auth/Auth";
+import {auth} from '../../firebase/firebase-config';
 
+
+const getDefaultState = () => ({
+    allPosts: getFakePosts(),
+    user: {
+    	name: null,
+    	id: null
+    },
+    isLoggedIn: false,
+    userId: null,
+});
 
 export default class App extends React.Component {
+    state = getDefaultState();
 
-    state = {
-        allPosts: posts
+    componentWillMount = () => {
+        auth.onAuthStateChanged(user => {
+            if (user) {
+              console.log('user login');
+              console.log(auth.currentUser.uid);
+              this.setState({
+                isLoggedIn:true,
+                userId: auth.currentUser.uid
+              });
+            } else {
+              console.log('user logout');
+              this.setState({
+                isLoggedIn:false,
+                userId: null
+              });
+            }
+          });
     }
 
     onAddTodo = todo => {
@@ -27,15 +54,18 @@ export default class App extends React.Component {
     }
 
     render() {
+    	const {allPosts} = this.state;
+
         return (
             <div className="container">
                 <Header/>
                 <div className="posts__container">
                     <div className="posts__body">
-                        {this.state.allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
+                        {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
                     </div>
                     <Editor onFormSubmit={this.onAddTodo}/>
                 </div>
+                <Auth />
             </div>
         );
     }
