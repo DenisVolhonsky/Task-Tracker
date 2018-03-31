@@ -7,7 +7,6 @@ import Posts from 'components/Posts';
 import posts from 'db.js';
 import Editor from "../Editor/index";
 
-firebase.initializeApp(config);
 
 export default class App extends React.Component {
 
