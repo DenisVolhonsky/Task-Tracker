@@ -9,7 +9,8 @@ import {auth} from '../../firebase/firebase-config';
 //import posts from 'db.js';
 import Editor from "components/Editor";
 import LeftNav from "components/LeftNav";
-
+import SignIn from 'components/SignIn';
+import Register from 'components/Register';
 
 
 const getDefaultState = () => ({
@@ -21,6 +22,7 @@ const getDefaultState = () => ({
     isLoggedIn: false,
     userId: null,
 });
+
 
 export default class App extends React.Component {
     state = getDefaultState();
@@ -70,6 +72,8 @@ export default class App extends React.Component {
                     <Editor onFormSubmit={this.onAddTodo}/>
                 </div>
                 <Auth />
+                <SignIn/>
+                <Register/>
             </div>
         );
     }
