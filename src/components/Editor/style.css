@@ -1,4 +1,64 @@
 .form {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    
+}
+input[type="text"] {
+    /*width: 100%;*/
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+/*    border: 1px solid #ccc;
+*/    border-radius: 4px;
+border-bottom: none;
+    box-sizing: border-box;
+    flex-grow: .8;
+}
+
+input[type=text]:focus:not([readonly]) {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+img {
+  width: 20px;
+  position: absolute;
+}
+
+.celendar {
+    right: 40px;
+    top: 15px;
+}
+
+.star {
+    right: 10px;
+    top: 17px;
+}
+/*.plus {
+    position: absolute;
+    left: 0;
+    top: 0;
+}*/
+.btn-floating {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-floating i {
+    line-height: 30px;
+}
+
+/*.form {
     padding: 10px;
     border: 1px solid #9E9E9E;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -49,3 +109,4 @@
     background: #9E9E9E;
     color: #fff;
 }
+*/
