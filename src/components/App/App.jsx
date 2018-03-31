@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
 import Header from 'components/Header';
+import Habit from 'components/Habit/Habit';
+import Modal_habit from 'components/Habit/Modal_habit';
+
+
 import Posts from 'components/Posts';
 import posts from 'db.js';
 import Editor from "../Editor/index";
@@ -9,7 +13,9 @@ export default class App extends React.Component {
 
     state = {
         allPosts: posts
+        
     }
+
 
     onAddTodo = todo => {
         this.setState({
@@ -30,6 +36,11 @@ export default class App extends React.Component {
                 <div className="posts__container">
                     <div className="posts__body">
                         {this.state.allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}
+                        
+                        
+                        <Habit/>
+                        <Modal_habit/>
+
                     </div>
                     <Editor onFormSubmit={this.onAddTodo}/>
                 </div>

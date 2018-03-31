@@ -1,0 +1,25 @@
+.Habit {
+    position: relative;
+}
+
+.Habit_input {
+    position: absolute;
+}
+
+.Icons {
+    width: 400px;
+    margin-top: 80px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.Habit_icon {
+    width: 50px;
+    margin: 20px;
+    bottom: 10px;
+}
