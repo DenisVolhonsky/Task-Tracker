@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style.css';
-import LeftNav from 'components/LeftNav';
+import LeftNav from 'components/LeftNav/LeftNav';
 import TaskManager from 'components/TaskManager/TaskManager';
 import ModalHabit from 'components/Habit/ModalHabit';
 import {getFakePosts} from 'firebase/postService.js';
@@ -101,7 +101,7 @@ class MainPage extends Component {
 
     return (
       <div className="main">
-        <LeftNav/>
+        <LeftNav tasks={this.state.tasks}/>
         <TaskManager
           tasks={this.state.tasks}
           onExtendedTaskAdd={ this.openTaskModal }

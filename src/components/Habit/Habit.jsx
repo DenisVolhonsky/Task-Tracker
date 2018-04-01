@@ -61,6 +61,7 @@ class Habit extends Component {
 
   render() {
     console.log(this.state);
+
     return (
       <div className='Habit'>
         <h5>Новая задача</h5>
@@ -77,42 +78,42 @@ class Habit extends Component {
           name="habits" className='Icons'
           selectedValue={this.state.category || ''}>
           <label>
-            <Radio value="family" onChange={this.handleChangeRadio}/>
+            <Radio value="Семья" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon1} alt=''/>
             <p>Семья</p>
           </label>
           <label>
-            <Radio value="health" onChange={this.handleChangeRadio}/>
+            <Radio value="Здоровье" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon2} alt=''/>
             <p>Здоровье</p>
           </label>
           <label>
-            <Radio value="develop" onChange={this.handleChangeRadio}/>
+            <Radio value="Саморазвитие" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon3} alt=''/>
             <p>Саморазвитие</p>
           </label>
           <label>
-            <Radio value="rest" onChange={this.handleChangeRadio}/>
+            <Radio value="Досуг" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon4} alt=''/>
             <p>Досуг</p>
           </label>
           <label>
-            <Radio value="environment" onChange={this.handleChangeRadio}/>
+            <Radio value="Окружение" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon5} alt=''/>
             <p>Окружение</p>
           </label>
           <label>
-            <Radio value="finance" onChange={this.handleChangeRadio}/>
+            <Radio value="Финансы" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon6} alt=''/>
             <p>Финансы</p>
           </label>
           <label>
-            <Radio value="carrier" onChange={this.handleChangeRadio}/>
+            <Radio value="Карьера" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon7} alt=''/>
             <p>Карьера</p>
           </label>
           <label>
-            <Radio value="travel" onChange={this.handleChangeRadio}/>
+            <Radio value="Путешествия" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon8} alt=''/>
             <p>Путешествия</p>
           </label>
