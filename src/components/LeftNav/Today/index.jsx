@@ -3,7 +3,7 @@ import './style.css';
 
 const Today = () => (
     <div className="Today">
-        <h2><a href="">Сегодня</a></h2>
+        <p className="today_text"><a href="">Сегодня</a></p>
     </div>
 );
 

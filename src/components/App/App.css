@@ -4,12 +4,33 @@
 }
 .posts__container {
     display: flex;
+    -webkit-box-shadow: 9px 15px 45px -8px rgba(0,0,0,0.69);
+    -moz-box-shadow: 9px 15px 45px -8px rgba(0,0,0,0.69);
+    box-shadow: 9px 15px 45px -8px rgba(0,0,0,0.69);
+    background-color: #fff;
 }
 .posts__body {
-    width: 70%;
+     width: 90%;
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
 }
 .posts__adding {
     width: 30%;
 }
+
+.main{
+	display: flex;
+	justify-content:flex-start;
+
+}
+
+.managerPlace {
+	  width: 80%;
+	background-color: #fff;
+}
+
+

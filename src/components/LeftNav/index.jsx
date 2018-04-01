@@ -6,7 +6,9 @@ import './style.css';
 
 const LeftNav = () => (
     <div className="LeftNav">
-        <h1><a className="AllTasks" href="">Все задачи</a></h1>
+         <div className="allTasks">
+        <p className="allTasks_text"><a href="">Все&nbsp;задачи</a></p>
+    </div>
         <Important/>
         <Today/>
         <LifeContainer/>
