@@ -78,43 +78,43 @@ class Habit extends Component {
           selectedValue={this.state.category || ''}>
           <label>
             <Radio value="family" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon1} alt=''/>
-            <p>Семья</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon1} alt=''/>
+            <p className = 'hab_name'>Семья</p>
           </label>
           <label>
             <Radio value="health" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon2} alt=''/>
-            <p>Здоровье</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon2} alt=''/>
+            <p className = 'hab_name'>Здоровье</p>
           </label>
           <label>
             <Radio value="develop" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon3} alt=''/>
-            <p>Саморазвитие</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon3} alt=''/>
+            <p className = 'hab_name'>Саморазвитие</p>
           </label>
           <label>
             <Radio value="rest" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon4} alt=''/>
-            <p>Досуг</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon4} alt=''/>
+            <p className = 'hab_name'>Досуг</p>
           </label>
           <label>
             <Radio value="environment" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon5} alt=''/>
-            <p>Окружение</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon5} alt=''/>
+            <p className = 'hab_name'>Окружение</p>
           </label>
           <label>
             <Radio value="finance" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon6} alt=''/>
-            <p>Финансы</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon6} alt=''/>
+            <p className = 'hab_name'>Финансы</p>
           </label>
           <label>
             <Radio value="carrier" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon7} alt=''/>
-            <p>Карьера</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon7} alt=''/>
+            <p className = 'hab_name'>Карьера</p>
           </label>
           <label>
             <Radio value="travel" onChange={this.handleChangeRadio}/>
-            <img className='Habit_icon' src={HabitIcon8} alt=''/>
-            <p>Путешествия</p>
+            <img className='Habit_icon Habit_click' src={HabitIcon8} alt=''/>
+            <p className = 'hab_name'>Путешествия</p>
           </label>
         </RadioGroup>
         <Row>
