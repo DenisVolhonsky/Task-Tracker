@@ -49,7 +49,7 @@
 
 }
 
-.posts__link:hover {
+.posts__link_active {
   color: #068e05;
 }
 

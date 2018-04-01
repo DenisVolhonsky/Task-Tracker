@@ -5,9 +5,9 @@ import garbage from './garbage.svg';
 import star from './star.svg';
 import done from './done.svg';
 
-const PostItem = ({id, text, onDelete }) => (
+const PostItem = ({id, text, onDelete, onDone, done }) => (
   <div className="post-item">
-    <a className="posts__link">
+    <a className={`posts__link ${ done ? 'posts__link_active' : ''}`} onClick={() => onDone(id, !done)}>
       &#10004;
     </a>
     <div className="post-item__container">

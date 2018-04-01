@@ -11,7 +11,7 @@ class TaskManager extends Component {
           onExtendedTaskAdd={ this.props.onExtendedTaskAdd }
           onSimpleTaskAdd={ this.props.onSimpleTaskAdd }
         />
-        <PostsList posts={ this.props.tasks } onDeleteTodo={this.props.onPostDelete} />
+        <PostsList posts={ this.props.tasks } onDeleteTodo={this.props.onPostDelete} onDone={this.props.onPostDone}/>
       </div>
     );
   }

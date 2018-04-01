@@ -84,6 +84,19 @@ class MainPage extends Component {
     this.openModal(HABIT_MODAL);
   }
 
+  onPostDone = (changedItemId, isDone) => {
+    const newTasks = this.state.tasks.map(
+      (item) => {
+        if(item.id === changedItemId) item.done = isDone;
+        return item;
+      }
+    );
+
+    this.setState({
+      tasks: newTasks
+    });
+  }
+
   render() {
 
     return (
@@ -94,6 +107,7 @@ class MainPage extends Component {
           onExtendedTaskAdd={ this.openTaskModal }
           onSimpleTaskAdd={ this.addTask }
           onPostDelete={this.deleteTask}
+          onPostDone={ this.onPostDone }
         />
         { this.renderModal() }
       </div>
