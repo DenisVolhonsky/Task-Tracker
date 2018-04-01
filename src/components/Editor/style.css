@@ -1,111 +1,100 @@
 * {
-    margin:0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .cart {
-   width: 90%;
-   margin:0 auto;
-
- -webkit-box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
-    -moz-box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
-    box-shadow: 3px 4px 2px -1px rgba(174,178,204,1);
-/*   border: 1px solid #ccc;*/
-   background: white;
-   padding:7px 10px;
+  width: 100%;
+  margin: 20px auto 0 auto;
+  background: #fff;
+  padding: 20px;
 }
+
 .cart_form {
-   width: 90%;
-   border: 1px solid #ccc;  
-   margin:20px auto;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: auto;
   position: relative;
-   display: -webkit-flex;
-   display: -moz-flex;
-   display: -ms-flex;
-   display: -o-flex;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 
-   
 }
+
 input[type="text"] {
-   /*width: 100%;*/
-   padding: 12px 20px;
-   margin: 8px 0;
-   display: inline-block;
-/*    border: 1px solid #ccc;
-*/    
+  padding: 12px 20px;
+  margin: 8px 0;
   border-bottom: none;
-   box-sizing: border-box;
-   flex-grow: .8;
+  box-sizing: border-box;
+  flex-grow: .8;
 }
 
 input[type=text]:focus:not([readonly]) {
-   border-bottom: none;
-   box-shadow: none;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 img {
- width: 20px;
- /*position: absolute;*/
+  width: 20px;
+  /*position: absolute;*/
 }
 
 .celendar {
-   right: 40px;
-   top: 15px;
+  right: 40px;
+  top: 15px;
 }
 
-
-/*.plus {
-   position: absolute;
-   left: 0;
-   top: 0;
-}*/
 .btn-floating {
-   width: 30px;
-   height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .cart button {
-   border:none;
-   background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 .cart button:focus {
-   background-color: transparent;
+  background-color: transparent;
 }
-
 
 .btn-floating i {
-   line-height: 30px;
+  line-height: 30px;
 }
 
 .star {
-   right: 10px;
-   top: 17px;
-}
-.star {
-   visibility:hidden;
-   font-size:30px;
-   cursor:pointer;
+  position: relative;
+  visibility: hidden;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 .star:before {
-  content: "\2605";
-  position: absolute; 
-  visibility:visible;
-} 
-  
-.star:checked:before {
   content: "\2606";
-  position: absolute; 
+  position: absolute;
+  visibility: visible;
+  top: -8px;
+  color: #ff5622;
+}
+
+.star:checked:before {
+  content: "\2605";
+  position: absolute;
+  color: #ff5622;
 }
 
 .cart [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-opacity:   1;
-left:  auto;
-right:  20px;
+  opacity: 1;
+  left: auto;
+  right: 20px;
+}
 
+.add-task {
+  width: calc(100% - 150px) !important;
+}
+
+.cart-form__controls {
+  width: 60px;
 }

@@ -1,16 +1,17 @@
 import React from 'react';
-import * as firebase from 'firebase';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Switch} from 'react-router-dom';
 import './App.css';
 import {auth} from 'firebase/firebase-config';
 import { getFakePosts } from 'firebase/postService.js';
 import Header from 'components/Header';
-import AppBody from 'components/AppBody';
+import AppBody from 'components/AppBody/AppBody';
+
 import Enter from "routes/Enter/Enter";
 import PrivateRoute from "components/PrivateRoute";
-import SignIn from 'routes/SignIn';
-import Register from 'routes/Register';
-import MainPage from 'routes/MainPage';
+import SignIn from 'routes/SignIn/SignIn';
+
+import Register from 'routes/Register/Register';
+import MainPage from 'routes/MainPage/MainPage';
 
 const getDefaultState = () => ({
     allPosts: getFakePosts(),
@@ -23,7 +24,7 @@ const getDefaultState = () => ({
 });
 
 
-export default class App extends React.Component {
+class App extends React.Component {
     state = getDefaultState();
 
     componentWillMount = () => {
@@ -86,5 +87,6 @@ export default class App extends React.Component {
             </div>
         );
     }
-} 
-// {isLoggedIn && (<Redirect to="/main" />) } 
+}
+
+export default App;

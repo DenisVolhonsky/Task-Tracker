@@ -5,7 +5,7 @@ import './style.css';
 class AppBody extends React.Component {
 	render() {
 		return (
-			<div className="AppBody">
+			<div>
 				{this.props.children}
 			</div>
 		);

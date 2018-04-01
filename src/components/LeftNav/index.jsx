@@ -1,7 +1,7 @@
 import React from 'react';
 import Important from 'components/LeftNav/Important';
 import Today from 'components/LeftNav/Today';
-import LifeContainer from 'components/LeftNav/LifeContainer';
+import LifeContainer from 'components/LeftNav/LifeContainer/LifeContainer';
 import './style.css';
 
 const LeftNav = () => (
