@@ -28,6 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .post__text {
@@ -70,6 +71,36 @@
   color: #fff;
   font-size: 14px;
 }
+
+.star__item{
+  position: relative;
+  visibility: hidden;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.star__item:before {
+  content: "\2606";
+  position: absolute;
+  visibility: visible;
+  top: -13px;
+  right: 25px;
+  color: #ff5622;
+}
+
+.star__item:checked:before {
+  content: "\2605";
+  position: absolute;
+  color: #ff5622;
+}
+
+.post-item__info [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  opacity: 1;
+  left: auto;
+  right: 20px;
+}
+
 
 .delete-btn {
   position: absolute;
