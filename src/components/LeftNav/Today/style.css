@@ -1,5 +1,35 @@
-.Today {
-    margin-bottom: 10px;
-    width: 120px;
-    border: 1px solid red;
+
+.Today{
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
 }
+
+.today_text {
+	font-size:20px;
+	margin-top: 15px;
+}
+
+.Today p {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.Today p:hover {
+	background-color: #303fa0;
+	transition: 0.5s;
+	border-radius: 3px;
+	padding: 0 10px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.Today  a:hover {
+	color:#fff;
+	transition: 1s;
+}
+
+.Today  a {
+	color:#000;
+}
+

@@ -37,18 +37,19 @@ export default class Editor extends Component {
     render() {
         return(
 
-        <div className = "container">
-            <div className = "row card-panel">
-                <form className="form" onSubmit={this._HandleSubmit} ref={node=>this.form=node}>
+        <div className = "cart">
+                <form className="cart_form" onSubmit={this._HandleSubmit} ref={node=>this.form=node}>
 
-               <a className="btn-floating btn-small waves-effect waves-light red plus"><i className="material-icons">add</i></a>
-                 <input type="text" className="add-task" placeholder="Добавить задачу" tabIndex="1" autoFocus onChange={this._inputChange}/>
-                <img className = "celendar" src = {Icon14} alt="" />
-                <img className = "star" src = {Icon15} alt="" /> 
+                <a className="btn-floating btn-small waves-effect waves-light red plus"><i className="material-icons">add</i></a>
+                  <input type="text" className="add-task" placeholder="Добавить задачу" tabIndex="1" autoFocus onChange={this._inputChange}/>
 
-                </form>
-            </div>
-        </div>
+                 <input className="star" type="checkbox" title="bookmark page"/><br/><br/>
+                 
+                  <button className = "celendar-btn"><img className = "celendar" src = {Icon14} alt="" /></button>
+                 
+
+               </form>
+           </div>
         );
     }
 }

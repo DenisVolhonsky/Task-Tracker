@@ -69,15 +69,29 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
+
+                <div className='main'>
                 <LeftNav/>
-                <div className="posts__container">
+                <div className="managerPlace">
+
+                <Editor onFormSubmit={this.onAddTodo}/>
+                 {/*<div className="posts__container">*/}
+
                     <div className="posts__body">
                         {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}  
-                        <Habit/>
-                        <Modal_habit/>
+                       
                     </div>
-                    <Editor onFormSubmit={this.onAddTodo}/>
-                </div>
+                    </div>
+               {/* </div>*/}
+                </div> 
+
+
+                
+               
+               <Habit/>
+                        <Modal_habit/>
+
+                
                 <Auth />
                 <SignIn/>
                 <Register/>

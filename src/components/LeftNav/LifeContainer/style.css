@@ -1,5 +1,16 @@
 .LifeItem {
-    margin-bottom: 10px;
+    margin-bottom: 15%;
     width: 120px;
-    border: 2px solid gold;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: bold;
 }
+
+.LifeItem a {
+	color:grey;
+}
+
+.LifeItem a:hover {
+	color:#303fa0;
+}
+
+
