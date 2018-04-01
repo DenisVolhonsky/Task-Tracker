@@ -11,7 +11,7 @@ const isHidden = (activeCategory, itemCategory) => {
   return activeCategory !== itemCategory;
 };
 
-const PostItem = ({ id, text, onDelete, onDone, done, category, activeCategory }) => (
+const PostItem = ({ id, text, onDelete, onDone, done, category, activeCategory, date }) => (
   <div className={`post-item ${isHidden(activeCategory, category) ? 'post-item_hidden' : ''}`}>
     <a className={`posts__link ${ done ? 'posts__link_active' : ''}`} onClick={() => onDone(id, !done)}>
       &#10004;
@@ -19,7 +19,7 @@ const PostItem = ({ id, text, onDelete, onDone, done, category, activeCategory }
     <div className="post-item__container">
       <p className="post-item__text">{ text }</p>
       <div className="post-item__info">
-        <p className="post-item__time">13:55</p>
+        <p className="post-item__time">{ date }</p>
         <input
               className="star__item"
               type="checkbox"

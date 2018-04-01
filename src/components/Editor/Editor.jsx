@@ -89,7 +89,16 @@ class Editor extends Component {
           />
           <div className="cart-form__controls">
 
-              <Input className="celendar-btn" name='on' type='date' onChange={(e, value) => {}}></Input>
+              {/*<Input*/}
+                {/*className="celendar-btn"*/}
+                {/*name='on' type='date'*/}
+                {/*onChange={(e, value) => {*/}
+                  {/*this.setState({*/}
+                    {/*date:value*/}
+                  {/*})*/}
+                {/*}}*/}
+                {/*tabIndex="4"*/}
+              {/*/>*/}
               <img className="celendar" src={Icon14} alt=""/>
 
             <input

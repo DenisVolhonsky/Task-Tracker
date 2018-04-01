@@ -29,11 +29,11 @@
 }
 
 .post-item__text {
-  width: calc(100% - 130px);
+  width: calc(100% - 210px);
 }
 
 .post-item__info {
-  width: 130px;
+  width: 210px;
   display: flex;
   align-items: center;
   justify-content: space-between;
