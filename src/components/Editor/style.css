@@ -32,17 +32,20 @@ input[type=text]:focus:not([readonly]) {
 
 img {
   width: 20px;
-  position: absolute;
 }
 
 .celendar {
     right: 40px;
     top: 15px;
+    position: absolute;
+
 }
 
 .star {
     right: 10px;
     top: 17px;
+    position: absolute;
+
 }
 /*.plus {
     position: absolute;

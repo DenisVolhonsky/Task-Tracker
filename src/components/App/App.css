@@ -1,6 +1,8 @@
-.container {
+.container__body {
     margin: 0 auto;
     width: 80%;
+    display: flex;  
+    justify-content: space-between;
 }
 .posts__container {
     display: flex;

@@ -2,12 +2,17 @@
     position: relative;
 }
 
+.Habit>h5{
+    color: rgb(26, 40, 167);
+    
+    margin-left: 150px; 
+}
 .Habit_input {
     position: absolute;
 }
 
 .Icons {
-    width: 400px;
+    width: 500px;
     margin-top: 80px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -16,10 +21,30 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    align-items: flex-end;
 }
 
+.icon_main>p{
+    margin-left: 30px;
+}
 .Habit_icon {
     width: 50px;
     margin: 20px;
+    margin-left: 50px;
     bottom: 10px;
+}
+.Modal-input {
+    width: 300px;
+}
+
+label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #f00;
 }

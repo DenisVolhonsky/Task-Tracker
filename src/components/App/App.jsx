@@ -1,5 +1,4 @@
 import React from 'react';
-import * as firebase from 'firebase';
 import './App.css';
 import Header from 'components/Header';
 import Habit from 'components/Habit/Habit';
@@ -8,7 +7,6 @@ import Posts from 'components/Posts';
 import { getFakePosts } from '../../firebase/postService.js';
 import Auth from "components/Auth/Auth";
 import {auth} from '../../firebase/firebase-config';
-//import posts from 'db.js';
 import Editor from "components/Editor";
 import LeftNav from "components/LeftNav";
 import SignIn from 'components/SignIn';
@@ -25,12 +23,9 @@ const getDefaultState = () => ({
     userId: null,
 });
 
-
-
-
 export default class App extends React.Component {
     state = getDefaultState();
-
+    
     componentWillMount = () => {
         auth.onAuthStateChanged(user => {
             if (user) {
@@ -65,7 +60,6 @@ export default class App extends React.Component {
 
     render() {
     	const {allPosts} = this.state;
-
         return (
             <div className="container">
                 <Header/>
@@ -73,7 +67,7 @@ export default class App extends React.Component {
                 <div className="posts__container">
                     <div className="posts__body">
                         {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}  
-                        <Habit/>
+
                         <Modal_habit/>
                     </div>
                     <Editor onFormSubmit={this.onAddTodo}/>
