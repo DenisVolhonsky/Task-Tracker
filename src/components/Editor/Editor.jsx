@@ -3,6 +3,7 @@ import v4 from 'uuid/v4';
 import './style.css';
 import {Helpers} from 'react-materialize';
 import Icon14 from './icon-14.svg';
+import moment from 'moment';
 
 class Editor extends Component {
 
@@ -22,7 +23,7 @@ class Editor extends Component {
     const newPost = {
       id: v4(),
       text: this.state.text,
-      date: Date.now(), // should be formatted,
+      date:  moment().format('DD MMMM, YYYY'),
       importance: this.state.importance || 'неважное'
     };
 
