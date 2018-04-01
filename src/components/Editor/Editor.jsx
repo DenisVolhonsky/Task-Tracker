@@ -7,12 +7,13 @@ import Icon14 from './icon-14.svg';
 class Editor extends Component {
 
   state = {
-    task: '',
+    text: '',
+    importance: null
   };
 
   _inputChange = event => {
     this.setState({
-      task: event.target.value,
+      text: event.target.value,
     });
   };
 
@@ -20,8 +21,9 @@ class Editor extends Component {
     event.preventDefault();
     const newPost = {
       id: v4(),
-      text: this.state.task,
-      date: Date.now() // should be formatted
+      text: this.state.text,
+      date: Date.now(), // should be formatted,
+      importance: this.state.importance || 'неважное'
     };
 
     if (newPost.title === '') {
@@ -38,7 +40,8 @@ class Editor extends Component {
     this.form.reset();
 
     this.setState({
-      task: '',
+      text: '',
+      importance: null
     });
 
     console.log(newPost);
@@ -50,9 +53,21 @@ class Editor extends Component {
     this.addTask(e, openWithModal);
   }
 
-  render() {
-    return (
+  onStarButtonClick = () => {
+    if (this.state.importance) {
+      this.setState({
+        importance: 'неважное'
+      });
+      return;
+    }
+    this.setState({
+      importance: 'важное'
+    });
+  }
 
+  render() {
+
+    return (
       <div className="cart">
         <form
           className="cart_form"
@@ -77,6 +92,7 @@ class Editor extends Component {
               className="star"
               type="checkbox"
               text="bookmark page"
+              onClick={this.onStarButtonClick}
             />
           </div>
         </form>

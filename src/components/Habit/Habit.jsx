@@ -16,11 +16,11 @@ import './Habit.css';
 
 class Habit extends Component {
   state = {
-    selectedValue: '',
-    task: '',
-    importance: 'неважное',
+    category: '',
+    importance: '',
     date: '',
     comment: '',
+    text: ''
   }
 
   componentDidMount(){
@@ -33,13 +33,13 @@ class Habit extends Component {
 
   handleChangeRadio = evt => {
     this.setState({
-      selectedValue: evt.target.value,
+      category: evt.target.value,
     });
   }
 
   handleSubmit = evt => {
     this.setState({
-      task: evt.target.value,
+      text: evt.target.value,
     });
   }
 
@@ -53,6 +53,10 @@ class Habit extends Component {
     this.setState({
       comment: evt.target.value,
     });
+  }
+
+  onSubmit = () => {
+    this.props.onPostAdd(this.state);
   }
 
   render() {
@@ -69,8 +73,9 @@ class Habit extends Component {
             onChange={this.handleSubmit}
           />
         </Row>
-        <RadioGroup name="habits" className='Icons'
-                    selectedValue={this.state.selectedValue}>
+        <RadioGroup
+          name="habits" className='Icons'
+          selectedValue={this.state.category || ''}>
           <label>
             <Radio value="family" onChange={this.handleChangeRadio}/>
             <img className='Habit_icon' src={HabitIcon1} alt=''/>
@@ -113,8 +118,12 @@ class Habit extends Component {
           </label>
         </RadioGroup>
         <Row>
-          <Input s={12} className="modal-input" type='select' defaultValue='неважное'
-                 onChange={this.handleChangeSelect}>
+          <Input
+            s={12} className="modal-input" type='select'
+            defaultValue={this.state.importance}
+            value={this.state.importance}
+            onChange={this.handleChangeSelect}
+          >
             <option value='самое важное'>самое важное</option>
             <option value='очень важное'>очень важное</option>
             <option value='важное'>важное</option>
@@ -127,7 +136,7 @@ class Habit extends Component {
             className="modal-input"
             name='on' type='date'
             placeholder='Время выполнения'
-            value={this.state.date}
+            value={this.state.date || ''}
             onChange={(e, value) => this.setState({ date: value })}
           />
         </Row>
@@ -136,7 +145,7 @@ class Habit extends Component {
                  onChange={this.handleChangeComment}/>
         </Row>
         <div>
-          <Button className='red' waves='light' onClick={this.props.onPostAdd}>Сохранить</Button>
+          <Button className='red' waves='light' onClick={this.onSubmit}>Сохранить</Button>
         </div>
       </div>
     );

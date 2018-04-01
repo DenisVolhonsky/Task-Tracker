@@ -14,8 +14,9 @@ const getDefaultState = () => ({
     comment: null,
     date: null,
     importance: null,
-    selectedValue: null,
-    text: null
+    text: null,
+    done: false,
+    category: null
   },
   user: {
     name: null,
@@ -54,6 +55,11 @@ class MainPage extends Component {
     });
   }
 
+  saveTaskAfterModal = (task) =>{
+      this.addTask(task);
+      this.closeModal();
+  }
+
   renderModal() {
     const { activeModal, selectedTask } = this.state;
 
@@ -63,10 +69,7 @@ class MainPage extends Component {
           currentTask={ selectedTask }
           isOpen={activeModal === HABIT_MODAL}
           closeModal={this.closeModal}
-          onPostAdd={ (task) => {
-            this.addTask(task);
-            this.closeModal();
-          }}
+          onPostAdd={ this.saveTaskAfterModal }
         />
       )
     };

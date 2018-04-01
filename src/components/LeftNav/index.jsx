@@ -7,7 +7,7 @@ import './style.css';
 const LeftNav = () => (
     <div className="LeftNav">
          <div className="allTasks">
-        <p className="allTasks_text"><a href="">Все&nbsp;задачи</a></p>
+        <a className="allTasks_text">Все&nbsp;задачи</a>
     </div>
         <Important/>
         <Today/>
