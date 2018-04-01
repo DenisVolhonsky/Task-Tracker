@@ -9,13 +9,14 @@ class Editor extends Component {
   state = {
     task: '',
   };
+
   _inputChange = event => {
-    // console.log(event.target.value);
     this.setState({
       task: event.target.value,
     });
   };
-  handleSubmit = event => {
+
+  addTask = (event, withModal) => {
     event.preventDefault();
     const newPost = {
       id: v4(),
@@ -27,8 +28,14 @@ class Editor extends Component {
       return;
     }
 
-    this.props.onFormSubmit(newPost);
+    if (withModal) {
+      this.props.onExtendedTaskAdd(newPost);
+    } else {
+      this.props.onSimpleTaskAdd(newPost);
+    }
+
     this.form.reset();
+
     this.setState({
       task: '',
     });
@@ -36,16 +43,25 @@ class Editor extends Component {
     console.log(newPost);
   };
 
+  addTaskWithForm = (e) => {
+    const openWithModal = true;
+
+    this.addTask(e, openWithModal);
+  }
+
   render() {
     return (
 
       <div className="cart">
         <form
           className="cart_form"
-          onSubmit={this.handleSubmit}
+          onSubmit={this.addTask}
           ref={node => this.form = node}
         >
-          <a className="btn-floating btn-small waves-effect waves-light red plus">
+          <a
+            className="btn-floating btn-small waves-effect waves-light red plus"
+            onClick={ this.addTaskWithForm }
+          >
             <i className="material-icons">add</i>
           </a>
 

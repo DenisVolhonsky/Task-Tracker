@@ -8,18 +8,6 @@ export default class PostsList extends React.Component {
     allPosts: getFakePosts(),
   };
 
-  onAddTodo = todo => {
-    this.setState({
-      allPosts: [...this.state.allPosts, todo],
-    });
-  };
-
-  onDeleteTodo = id => {
-    this.setState({
-      allPosts: this.state.allPosts.filter(post => post.id !== id),
-    });
-  };
-
   render() {
     const {allPosts} = this.state;
 
