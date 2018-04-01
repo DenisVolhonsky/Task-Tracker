@@ -1,19 +1,15 @@
 import React from 'react';
 import * as firebase from 'firebase';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
+import {auth} from 'firebase/firebase-config';
+import { getFakePosts } from 'firebase/postService.js';
 import Header from 'components/Header';
-import Habit from 'components/Habit/Habit';
-import Modal_habit from 'components/Habit/Modal_habit';
-import Posts from 'components/Posts';
-import { getFakePosts } from '../../firebase/postService.js';
-import Auth from "components/Auth/Auth";
-import {auth} from '../../firebase/firebase-config';
-//import posts from 'db.js';
-import Editor from "components/Editor";
-import LeftNav from "components/LeftNav";
-import SignIn from 'components/SignIn';
-import Register from 'components/Register';
-import Enter from "../Enter/Enter";
+import AppBody from 'components/AppBody';
+import Enter from "routes/Enter/Enter";
+import SignIn from 'routes/SignIn';
+import Register from 'routes/Register';
+import MainPage from 'routes/MainPage';
 
 const getDefaultState = () => ({
     allPosts: getFakePosts(),
@@ -51,17 +47,17 @@ export default class App extends React.Component {
     }
 
 
-    onAddTodo = todo => {
-        this.setState({
-            allPosts: [...this.state.allPosts, todo]
-        });
-    }
+    // onAddTodo = todo => {
+    //     this.setState({
+    //         allPosts: [...this.state.allPosts, todo]
+    //     });
+    // }
 
-    onDeleteTodo = id => {
-        this.setState({
-           allPosts: this.state.allPosts.filter(post => post.id !== id )
-        });
-    }
+    // onDeleteTodo = id => {
+    //     this.setState({
+    //        allPosts: this.state.allPosts.filter(post => post.id !== id )
+    //     });
+    // }
 
     render() {
     	const {allPosts} = this.state;
@@ -69,7 +65,17 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
-                <LeftNav/>
+                <AppBody>
+                    <Switch>
+                        <Route exact path="/" component={Enter} />
+                        <Route path="/register" component={Register} />
+                        <Route path="/login" component={SignIn} /> 
+                        <Route path="/main" render={() => <MainPage />} /> 
+                        <Redirect to="/" />
+                    </Switch>
+                </AppBody>
+
+            {/*     <LeftNav/>
                 <div className="posts__container">
                     <div className="posts__body">
                         {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}  
@@ -77,11 +83,7 @@ export default class App extends React.Component {
                         <Modal_habit/>
                     </div>
                     <Editor onFormSubmit={this.onAddTodo}/>
-                </div>
-                <Auth />
-                <SignIn/>
-                <Register/>
-                <Enter/>
+                </div> */}  
             </div>
         );
     }

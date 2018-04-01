@@ -1,10 +1,11 @@
 import {usersDbRef, auth} from './firebase-config';
 
-export const createUser = (email, password) => {
+export const createUser = (name, email, password) => {
 	auth
     .createUserWithEmailAndPassword(email, password)
     .then(user => {
 		const currentUser = {
+            name: name,
 	        id: user.uid,
 	        email: user.email,
 		};
@@ -13,16 +14,28 @@ export const createUser = (email, password) => {
         .child(currentUser.id)
         .set(currentUser);
     })
-    // .catch(error => dispatch(createUserFail(error)));
+    .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorCode, errorMessage);
+    });
 };
 
 export const signIn = (email, password) => {
 	auth
     .signInWithEmailAndPassword(email, password)
-    // .catch(error => dispatch(signInFail(error)));
+    .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorCode, errorMessage);
+    });
 };
 
 export const signOut = () => {
 	auth.signOut()
-	// .catch(error => dispatch(signOutFail(error)));
+	.catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorCode, errorMessage);
+    });
 };
