@@ -18,14 +18,15 @@ class Editor extends Component {
 
   addTask = (event, withModal) => {
     event.preventDefault();
+    const moment = require('moment');
     const newPost = {
       id: v4(),
       text: this.state.task,
-      date: Date.now() // should be formatted
+      date: moment().format('DD MMMM, YYYY')
     };
 
-    if (newPost.title === '') {
-      alert('Нужно заполнить поле!');
+      if (newPost.title === '') {
+        alert('Нужно заполнить поле!');
       return;
     }
 
