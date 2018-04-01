@@ -10,6 +10,7 @@ const HABIT_MODAL = 'habit-modal';
 const getDefaultState = () => ({
   tasks: getFakePosts(),
   selectedTask: {
+    id: null,
     comment: null,
     date: null,
     importance: null,
