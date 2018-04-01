@@ -7,6 +7,7 @@ import { getFakePosts } from 'firebase/postService.js';
 import Header from 'components/Header';
 import AppBody from 'components/AppBody';
 import Enter from "routes/Enter/Enter";
+import PrivateRoute from "components/PrivateRoute";
 import SignIn from 'routes/SignIn';
 import Register from 'routes/Register';
 import MainPage from 'routes/MainPage';
@@ -20,8 +21,6 @@ const getDefaultState = () => ({
     isLoggedIn: false,
     userId: null,
 });
-
-
 
 
 export default class App extends React.Component {
@@ -43,48 +42,50 @@ export default class App extends React.Component {
                 userId: null
               });
             }
-          });
+        });
     }
 
-
-    // onAddTodo = todo => {
-    //     this.setState({
-    //         allPosts: [...this.state.allPosts, todo]
-    //     });
-    // }
-
-    // onDeleteTodo = id => {
-    //     this.setState({
-    //        allPosts: this.state.allPosts.filter(post => post.id !== id )
-    //     });
-    // }
-
     render() {
-    	const {allPosts} = this.state;
+    	const {allPosts, isLoggedIn} = this.state;
 
         return (
             <div className="container">
                 <Header/>
                 <AppBody>
-                    <Switch>
-                        <Route exact path="/" component={Enter} />
-                        <Route path="/register" component={Register} />
-                        <Route path="/login" component={SignIn} /> 
-                        <Route path="/main" render={() => <MainPage />} /> 
-                        <Redirect to="/" />
+                   
+                    <Switch>                       
+                        <PrivateRoute
+                            exact
+                            path="/"
+                            component={Enter}
+                            isAuthenticated={!isLoggedIn}
+                            redirectTo="/main"
+                        />
+                        <PrivateRoute
+                            exact
+                            path="/register"
+                            component={Register}
+                            isAuthenticated={!isLoggedIn}
+                            redirectTo="/main"
+                        />
+                        <PrivateRoute
+                            exact
+                            path="/login"
+                            component={SignIn}
+                            isAuthenticated={!isLoggedIn}
+                            redirectTo="/main"
+                        />
+                        <PrivateRoute
+                            exact
+                            path="/main"
+                            component={MainPage}
+                            isAuthenticated={isLoggedIn}
+                            redirectTo="/"
+                        />
                     </Switch>
                 </AppBody>
-
-            {/*     <LeftNav/>
-                <div className="posts__container">
-                    <div className="posts__body">
-                        {allPosts.map(post => <Posts onTodoClick={this.onDeleteTodo} key={post.id} {...post}/>)}  
-                        <Habit/>
-                        <Modal_habit/>
-                    </div>
-                    <Editor onFormSubmit={this.onAddTodo}/>
-                </div> */}  
             </div>
         );
     }
-}
+} 
+// {isLoggedIn && (<Redirect to="/main" />) } 

@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
+import './firebase/postService'
+
 
 const root = document.querySelector('#root');
 
 ReactDOM.render(
-	<BrowserRouter basename="/ReactVisitCard/build">
+	<BrowserRouter>
 		<App />
 	</BrowserRouter>
 	, root);
-
-registerServiceWorker();

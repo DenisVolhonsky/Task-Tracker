@@ -16,7 +16,7 @@ export const usersDbRef = database.child('users');
 export const tasksDbRef = database.child('tasks');
 export const auth = firebase.auth();
 
-// // категория придет из формы после создания таска
+// категория придет из формы после создания таска
 // const category = 'health';
 // const userId = auth.currentUser.uid;
 
