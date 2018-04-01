@@ -9,6 +9,7 @@ const HABIT_MODAL = 'habit-modal';
 
 const getDefaultState = () => ({
   tasks: getFakePosts(),
+  activeCategory: 'All',
   selectedTask: {
     id: null,
     comment: null,
@@ -35,6 +36,12 @@ class MainPage extends Component {
   openModal = (modalName) => {
     this.setState({
       activeModal: modalName
+    });
+  }
+
+  setCategory = (catName) => {
+    this.setState({
+      activeCategory: catName
     });
   }
 
@@ -101,13 +108,14 @@ class MainPage extends Component {
 
     return (
       <div className="main">
-        <LeftNav tasks={this.state.tasks}/>
+        <LeftNav tasks={this.state.tasks} onCategoryChange={this.setCategory}/>
         <TaskManager
           tasks={this.state.tasks}
           onExtendedTaskAdd={ this.openTaskModal }
           onSimpleTaskAdd={ this.addTask }
           onPostDelete={this.deleteTask}
           onPostDone={ this.onPostDone }
+          activeCategory={ this.state.activeCategory }
         />
         { this.renderModal() }
       </div>

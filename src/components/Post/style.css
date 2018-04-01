@@ -15,6 +15,10 @@
   padding: 10px;
 }
 
+.post-item_hidden {
+  display: none;
+}
+
 .post-item:hover {
   background-color: #c7c7ff;
   border-radius: 3px;

@@ -8,7 +8,7 @@ const getTasks = (name, tasks) => tasks.filter(({ text, category}) => {
   return category === name;
 });
 
-const LifeContainer = ({ tasks }) => {
+const LifeContainer = ({ tasks, onCategoryChange}) => {
   const categoriesData = {
     'Семья': {
       name: 'Семья',
@@ -48,7 +48,7 @@ const LifeContainer = ({ tasks }) => {
     <div className="LifeContainer">
       {
         categoriesNames.map(
-          name => <LifeItem key={name} catItem={name} count={categoriesData[name].tasks.length}/>
+          name => <LifeItem key={name} catItem={name} count={categoriesData[name].tasks.length} onCategoryChange={() => onCategoryChange(name)}/>
         )
       }
     </div>

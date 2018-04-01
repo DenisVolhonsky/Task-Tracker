@@ -1,16 +1,23 @@
 .LifeItem {
-    margin-bottom: 15%;
-    width: 120px;
-  	font-family: 'Roboto', sans-serif;
-  	font-weight: bold;
+  margin-bottom: 15%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LifeItem_empty {
+  color: #9a9999;
 }
 
 .LifeItem a {
-	color:grey;
+  color: grey;
 }
 
 .LifeItem a:hover {
-	color:#303fa0;
+  color: #303fa0;
 }
 
 

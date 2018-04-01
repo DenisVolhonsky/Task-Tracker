@@ -5,8 +5,14 @@ import garbage from './garbage.svg';
 import star from './star.svg';
 import done from './done.svg';
 
-const PostItem = ({id, text, onDelete, onDone, done }) => (
-  <div className="post-item">
+const isHidden = (activeCategory, itemCategory) => {
+  if (activeCategory === 'All') return false;
+
+  return activeCategory !== itemCategory;
+};
+
+const PostItem = ({ id, text, onDelete, onDone, done, category, activeCategory }) => (
+  <div className={`post-item ${isHidden(activeCategory, category) ? 'post-item_hidden' : ''}`}>
     <a className={`posts__link ${ done ? 'posts__link_active' : ''}`} onClick={() => onDone(id, !done)}>
       &#10004;
     </a>
