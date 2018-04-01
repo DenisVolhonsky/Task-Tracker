@@ -69,26 +69,3 @@ class Modal_habit extends React.Component {
 export default Modal_habit;
 
 
-// class Test {
-//     state = {
-//         selectedValue: ''
-//     }
-//     handleChange = evt => {
-//         const value = evt.target.value;
-//         this.setState({
-//             selectedValue: value
-//         })
-//     }
-//     render() {
-//         return (
-//             <RadioGroup
-//                 name="fruit"
-//                 selectedValue={this.state.selectedValue}
-//                 onChange={this.handleChange}>
-//                 <Radio value="apple" />Apple
-//                 <Radio value="orange" />Orange
-//                 <Radio value="watermelon" />Watermelon
-//             </RadioGroup>
-//         );
-//     }
-// }
