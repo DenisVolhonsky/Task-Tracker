@@ -18,7 +18,7 @@ class Habit extends Component {
   state = {
     selectedValue: '',
     task: '',
-    importance: '',
+    importance: 'неважное',
     date: '',
     comment: '',
   }
@@ -100,14 +100,13 @@ class Habit extends Component {
           </label>
         </RadioGroup>
         <Row>
-          <Input s={12} className="Modal-input" type='select' defaultValue='6'
+          <Input s={12} className="Modal-input" type='select' defaultValue='неважное'
                  onChange={this.handleChangeSelect}>
             <option value='самое важное'>самое важное</option>
             <option value='очень важное'>очень важное</option>
             <option value='важное'>важное</option>
             <option value='такое себе'>такое себе</option>
             <option value='неважное'>неважное</option>
-            <option value='важность' disabled='disabled'>важность</option>
           </Input>
         </Row>
         <Row>
@@ -115,7 +114,7 @@ class Habit extends Component {
             className="Modal-input"
             name='on' type='date'
             placeholder='Время выполнения'
-            onChange={(e, value) => this.setState({time: value})}
+            onChange={(e, value) => this.setState({ date: value })}
           />
         </Row>
         <Row>
@@ -123,7 +122,7 @@ class Habit extends Component {
                  onChange={this.handleChangeComment}/>
         </Row>
         <div>
-          <Button className='red' waves='light'>Сохранить</Button>
+          <Button className='red' waves='light' onClick={this.props.onPostAdd}>Сохранить</Button>
         </div>
       </div>
     );

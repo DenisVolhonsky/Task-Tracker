@@ -5,28 +5,28 @@ import garbage from './garbage.svg';
 import star from './star.svg';
 import done from './done.svg';
 
-const Posts = ({id, title, onTodoClick}) => (
+const PostItem = ({id, text, onDelete }) => (
   <div className="post-item">
     <a className="posts__link" href="">
       <img className="done" src={done} alt=""/>
     </a>
     <div className="post-item__container">
-      <p className="post-item__text">{title}</p>
+      <p className="post-item__text">{ text }</p>
       <div className="post-item__info">
         <p className="post-item__time">13:55</p>
         <img className="str" src={star} alt=""/>
         <img className="garb" src={garbage} alt=""
-             onClick={() => onTodoClick(id)}
+             onClick={() => onDelete(id)}
         />
       </div>
     </div>
   </div>
 );
 
-Posts.propTypes = {
+PostItem.propTypes = {
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
-export default Posts;
+export default PostItem;
 

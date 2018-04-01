@@ -1,5 +1,5 @@
 import { posts } from './fakeDb';
-import {tasksDbRef,auth} from './firebase-config';
+import { tasksDbRef, auth } from './firebase-config';
 
 const userId = 'EIxUgcpjsafs3YUqiHACSclL6Gt1';
 

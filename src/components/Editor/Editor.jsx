@@ -20,7 +20,7 @@ class Editor extends Component {
     event.preventDefault();
     const newPost = {
       id: v4(),
-      title: this.state.task,
+      text: this.state.task,
     };
 
     if (newPost.title === '') {
@@ -75,7 +75,7 @@ class Editor extends Component {
             <input
               className="star"
               type="checkbox"
-              title="bookmark page"
+              text="bookmark page"
             />
           </div>
         </form>

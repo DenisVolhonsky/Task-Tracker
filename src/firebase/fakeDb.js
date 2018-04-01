@@ -3,26 +3,26 @@ import v4 from 'uuid/v4';
 export const posts = [
     {
         id: v4(),
-        title: 'Погулять'
+        text: 'Погулять'
     },
     {
         id: v4(),
-        title: 'Бухнуть'
+        text: 'Бухнуть'
     },
     {
         id: v4(),
-        title: 'Поспать'
+        text: 'Поспать'
     },
     {
         id: v4(),
-        title: 'Поесть'
+        text: 'Поесть'
     },
     {
         id: v4(),
-        title: 'Поработать'
+        text: 'Поработать'
     },
     {
         id: v4(),
-        title: 'Похакатонить'
+        text: 'Похакатонить'
     }
 ]

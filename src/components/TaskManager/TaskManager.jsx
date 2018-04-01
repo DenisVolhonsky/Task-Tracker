@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import Editor from 'components/Editor/Editor';
-import PostsList from 'components/PostsList';
+import PostsList from 'components/PostsList/PostsList';
 
 class TaskManager extends Component {
   render() {
@@ -11,7 +11,7 @@ class TaskManager extends Component {
           onExtendedTaskAdd={ this.props.onExtendedTaskAdd }
           onSimpleTaskAdd={ this.props.onSimpleTaskAdd }
         />
-        <PostsList/>
+        <PostsList posts={ this.props.tasks } onDeleteTodo={this.props.onPostDelete} />
       </div>
     );
   }

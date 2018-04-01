@@ -2,7 +2,6 @@ import React from 'react';
 import {Switch} from 'react-router-dom';
 import './App.css';
 import {auth} from 'firebase/firebase-config';
-import {getFakePosts} from 'firebase/postService.js';
 import Header from 'components/Header';
 import AppBody from 'components/AppBody/AppBody';
 
@@ -14,7 +13,6 @@ import Register from 'routes/Register/Register';
 import MainPage from 'routes/MainPage/MainPage';
 
 const getDefaultState = () => ({
-  allPosts: getFakePosts(),
   user: {
     name: null,
     id: null,
