@@ -98,3 +98,7 @@ img {
 .cart-form__controls {
   width: 60px;
 }
+
+.btn-floating {
+  z-index: 0;
+}
