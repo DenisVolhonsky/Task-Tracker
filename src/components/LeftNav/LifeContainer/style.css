@@ -2,14 +2,13 @@
     margin-bottom: 15%;
     width: 120px;
   	font-family: 'Roboto', sans-serif;
-  	font-weight: bold;
+  	color:#828282;
+  	font-weight: 900;
+  	cursor: pointer;	
 }
 
-.LifeItem a {
-	color:grey;
-}
-
-.LifeItem a:hover {
+.LifeItem :hover {
+	transition: 0.5s;
 	color:#303fa0;
 }
 

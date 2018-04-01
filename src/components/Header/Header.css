@@ -29,3 +29,13 @@
     position: absolute;
     left: 20px;
 }
+
+.Input [type="text"] {
+   width: 500px;
+   color:#fff;
+
+}
+
+.input-field label {
+    color:#fff;
+}

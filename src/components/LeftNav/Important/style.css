@@ -1,12 +1,12 @@
 .Important {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 100%;
     text-align: center;
 }
 
 .important_text {
 	font-size:20px;
-	margin-top: 15px;
+	margin-top: 15px;color:#000;
 }
 
 .important_text{
@@ -14,21 +14,16 @@
 	margin-left: 10px;
 }
 
-.Important p:hover {
-	background-color: #303fa0;
-	border-radius: 3px;
-	margin-right: 0;
-	margin-left: 0;
-	padding: 0 10px;
+
+.important_text:hover {
 	transition: 1s;
+	color:#e1e1e1;
+	cursor: pointer;	
 }
 
-.Important  a:hover {
-	color:#fff;
-	transition: 1s;
-}
+/*.greyColor {
+	color:#e1e1e1;
+}*/
 
-.Important  a {
-	color:#000;
-}
+
 

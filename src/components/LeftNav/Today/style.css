@@ -22,11 +22,13 @@
 	padding: 0 10px;
 	margin-right: 0;
 	margin-left: 0;
+
 }
 
 .Today  a:hover {
-	color:#fff;
+	color:#e1e1e1;
 	transition: 1s;
+	cursor: pointer;	
 }
 
 .Today  a {
