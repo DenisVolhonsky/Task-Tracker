@@ -1,5 +1,12 @@
+/*.LifeItem {
+   margin-left: 10px;
+
+
+}*/
 
 .LifeItemCount {
+    position: absolute;
+    right: 20px;
     width: 20px;
     line-height: 20px;
    	background-color: #303fa0;

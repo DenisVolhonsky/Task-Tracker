@@ -3,7 +3,7 @@ import './style.css';
 
 const Important = () => (
     <div className="Important">
-        <a className="important_text">Важное</a>
+        <a className="important_text greyColor">Важное</a>
     </div>
 );
 

@@ -1,5 +1,5 @@
 .LeftNav {
-    padding: 10px 20px;
+    padding: 10px 25px;
     width: 250px;
     margin-right: 20px;
     position: relative;
@@ -7,34 +7,45 @@
 }
 
 .all {
-    margin-bottom: 10px;
     width: 100%;
-    
 }
 
+.allTasks {
+	text-align: center; 
+	margin-bottom: 15px;
+}
 .allTasks_text {
 	font-size:20px;
 	margin-top: 15px;
 	margin-right: 10px;
 	margin-left: 10px;
 	text-align: center;
+	color:#000;
 }
 
 .allTasks p:hover {
 	background-color: #303fa0;
 	transition: 1s;
+
 	border-radius: 3px;
 	margin-right: 0;
 	margin-left: 0;
 	padding: 0 10px;
+	transition: 1s;
+	
 }
 
 
 .allTasks  a:hover {
-	color:#fff;
+	color:#e1e1e1;
 	transition: 1s;
+	cursor:pointer;
 }
 
-.allTasks  a {
+/*.allTasks  a {
 	color:#000;
-}
+}*/
+
+
+
+
