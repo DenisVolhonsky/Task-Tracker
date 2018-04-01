@@ -51,8 +51,7 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header/>
-                <AppBody>
-                   
+                <AppBody>                   
                     <Switch>                       
                         <PrivateRoute
                             exact

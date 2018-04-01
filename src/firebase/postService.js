@@ -24,5 +24,5 @@ export const saveTask = (category, text) => {
 
 export const getFakePosts = () => posts;
 
-saveTask('sport', 'sheep');
-deleteTask('sport', '-L9-P9MXzGfRa_CnPJ1v');
+// saveTask('sport', 'sheep');
+// deleteTask('sport', '-L9-P9MXzGfRa_CnPJ1v');
