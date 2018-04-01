@@ -14,7 +14,11 @@ const Posts = ({id, title, onTodoClick}) => (
       <p className="post-item__text">{title}</p>
       <div className="post-item__info">
         <p className="post-item__time">13:55</p>
-        <img className="str" src={star} alt=""/>
+        <input
+              className="star__item"
+              type="checkbox"
+              title="bookmark page"
+            />
         <img className="garb" src={garbage} alt=""
              onClick={() => onTodoClick(id)}
         />
