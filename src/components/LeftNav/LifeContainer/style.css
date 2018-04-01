@@ -1,15 +1,33 @@
 .LifeItem {
-    margin-bottom: 15%;
-    width: 120px;
-  	font-family: 'Roboto', sans-serif;
-  	color:#828282;
-  	font-weight: 900;
-  	cursor: pointer;
+  margin-bottom: 15%;
+  width: 120px;
+  font-family: 'Roboto', sans-serif;
+  color: #828282;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .LifeItem :hover {
-	transition: 0.5s;
-	color:#303fa0;
+  transition: 0.5s;
+  color: #303fa0;
+}
+
+.category-container {
+  text-align: center;
+}
+
+.category-container:first-child {
+  margin-top: 20px;
+}
+.category-container:last-child {
+  margin-bottom: 30px;
+}
+
+.category-container:hover {
+
 }
 
 

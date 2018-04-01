@@ -2,8 +2,8 @@ import React from 'react';
 import './style.css';
 
 const Important = () => (
-    <div className="Important">
-        <a className="important_text greyColor">Важное</a>
+    <div className="category-container">
+        <a className="important_text">Важное</a>
     </div>
 );
 

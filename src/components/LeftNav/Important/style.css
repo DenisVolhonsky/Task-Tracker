@@ -5,15 +5,10 @@
 }
 
 .important_text {
+  cursor: pointer;
 	font-size:20px;
 	margin-top: 15px;color:#000;
 }
-
-.important_text{
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
 
 .important_text:hover {
 	transition: 1s;
