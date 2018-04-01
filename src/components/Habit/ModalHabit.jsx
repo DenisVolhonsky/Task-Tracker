@@ -32,7 +32,7 @@ class ModalHabit extends Component {
             taskToEdit={ this.props.taskToEdit }
             currentTask={ this.props.currentTask }
           />
-          <button onClick={ closeModal }>close</button>
+          {/*<button onClick={ closeModal }>close</button>*/}
         </Modal>
       </div>
     );
