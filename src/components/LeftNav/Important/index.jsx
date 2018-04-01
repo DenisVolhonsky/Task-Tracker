@@ -3,7 +3,7 @@ import './style.css';
 
 const Important = () => (
     <div className="category-container">
-        <a className="important_text">Важное</a>
+        <a className="important_text important_text-disable">Важное</a>
     </div>
 );
 

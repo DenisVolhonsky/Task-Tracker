@@ -6,12 +6,14 @@ import './style.css';
 
 const LeftNav = ({tasks, onCategoryChange}) => (
   <div className="LeftNav">
-    <div className="category-container"
-         onClick={() => onCategoryChange('All')}>
-      <a className="important_text">Все задачи</a>
+    <div className='category-list'>
+      <div className="category-container"
+           onClick={() => onCategoryChange('All')}>
+        <a className="important_text">Все задачи</a>
+      </div>
+      <Important/>
+      <Today/>
     </div>
-    <Important/>
-    <Today/>
     <LifeContainer tasks={tasks} onCategoryChange={onCategoryChange}/>
   </div>
 );

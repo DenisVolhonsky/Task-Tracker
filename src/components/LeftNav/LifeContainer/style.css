@@ -19,15 +19,11 @@
   text-align: center;
 }
 
-.category-container:first-child {
-  margin-top: 20px;
-}
-.category-container:last-child {
-  margin-bottom: 30px;
-}
-
 .category-container:hover {
 
 }
 
+.category-list {
+  margin: 20px auto;
+}
 

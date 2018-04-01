@@ -16,6 +16,9 @@
 	cursor: pointer;	
 }
 
+.important_text-disable {
+  color:grey;
+}
 /*.greyColor {
 	color:#e1e1e1;
 }*/
