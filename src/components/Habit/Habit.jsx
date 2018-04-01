@@ -23,6 +23,14 @@ class Habit extends Component {
     comment: '',
   }
 
+  componentDidMount(){
+    this.setState(
+      state => {
+        return {...state, ...this.props.currentTask}
+      }
+    )
+  }
+
   handleChangeRadio = evt => {
     this.setState({
       selectedValue: evt.target.value,
@@ -52,9 +60,14 @@ class Habit extends Component {
     return (
       <div className='Habit'>
         <h5>Новая задача</h5>
-        <Row className='Habit_input'>
-          <Input className="Modal-input" s={6} placeholder=" Название"
-                 onChange={this.handleSubmit}/>
+        <Row className='habit-input'>
+          <Input
+            className="modal-input"
+            s={12}
+            placeholder=" Название"
+            value={this.state.text}
+            onChange={this.handleSubmit}
+          />
         </Row>
         <RadioGroup name="habits" className='Icons'
                     selectedValue={this.state.selectedValue}>
@@ -100,7 +113,7 @@ class Habit extends Component {
           </label>
         </RadioGroup>
         <Row>
-          <Input s={12} className="Modal-input" type='select' defaultValue='неважное'
+          <Input s={12} className="modal-input" type='select' defaultValue='неважное'
                  onChange={this.handleChangeSelect}>
             <option value='самое важное'>самое важное</option>
             <option value='очень важное'>очень важное</option>
@@ -111,14 +124,15 @@ class Habit extends Component {
         </Row>
         <Row>
           <Input
-            className="Modal-input"
+            className="modal-input"
             name='on' type='date'
             placeholder='Время выполнения'
+            value={this.state.date}
             onChange={(e, value) => this.setState({ date: value })}
           />
         </Row>
         <Row>
-          <Input className="Modal-input" s={6} placeholder='Комментарий'
+          <Input className="modal-input" s={6} placeholder='Комментарий'
                  onChange={this.handleChangeComment}/>
         </Row>
         <div>

@@ -7,17 +7,13 @@
     
     margin-left: 150px; 
 }
-.Habit_input {
-    position: absolute;
+.habit-input,
+.modal-input {
+  width: 100%;
 }
 
 .Icons {
     width: 500px;
-    margin-top: 80px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -33,7 +29,7 @@
     margin-left: 50px;
     bottom: 10px;
 }
-.Modal-input {
+.modal-input {
     width: 300px;
 }
 

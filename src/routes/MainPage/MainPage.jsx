@@ -60,7 +60,7 @@ class MainPage extends Component {
     const modals = {
       [HABIT_MODAL]: (
         <ModalHabit
-          taskToEdit={ selectedTask }
+          currentTask={ selectedTask }
           isOpen={activeModal === HABIT_MODAL}
           closeModal={this.closeModal}
           onPostAdd={ (task) => {
@@ -74,7 +74,10 @@ class MainPage extends Component {
     return modals[activeModal];
   }
 
-  openTaskModal = () => {
+  openTaskModal = (task) => {
+    this.setState({
+      selectedTask: { ...this.state.selectedTask, ...task }
+    });
     this.openModal(HABIT_MODAL);
   }
 

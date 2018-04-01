@@ -27,7 +27,11 @@ class ModalHabit extends Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <Habit onPostAdd={ this.props.onPostAdd } taskToEdit={ this.props.taskToEdit }/>
+          <Habit
+            onPostAdd={ this.props.onPostAdd }
+            taskToEdit={ this.props.taskToEdit }
+            currentTask={ this.props.currentTask }
+          />
           <button onClick={ closeModal }>close</button>
         </Modal>
       </div>

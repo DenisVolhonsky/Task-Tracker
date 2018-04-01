@@ -21,6 +21,7 @@ class Editor extends Component {
     const newPost = {
       id: v4(),
       text: this.state.task,
+      date: Date.now() // should be formatted
     };
 
     if (newPost.title === '') {
