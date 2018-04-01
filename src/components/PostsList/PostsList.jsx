@@ -7,7 +7,7 @@ const PostsList = ({ posts, onDeleteTodo }) => (
   <div className="posts__body">
     {
       posts.map((post) =>
-        <Post onDelete={ onDeleteTodo } key={post.id} { ...post } />
+        <Post onDelete={ onDeleteTodo } { ...post } />
       )
     }
   </div>
