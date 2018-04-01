@@ -8,7 +8,7 @@ import done from './done.svg';
 const PostItem = ({id, text, onDelete }) => (
   <div className="post-item">
     <a className="posts__link">
-      <img className="done" src={done} alt=""/>
+      &#10004;
     </a>
     <div className="post-item__container">
       <p className="post-item__text">{ text }</p>
