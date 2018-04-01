@@ -3,6 +3,8 @@ import v4 from 'uuid/v4';
 import './style.css';
 import {Helpers} from 'react-materialize';
 import Icon14 from './icon-14.svg';
+import {Input} from 'react-materialize';
+import {Row} from 'react-materialize';
 import moment from 'moment';
 
 class Editor extends Component {
@@ -86,9 +88,10 @@ class Editor extends Component {
                  tabIndex="1" autoFocus onChange={this._inputChange}
           />
           <div className="cart-form__controls">
-            <button className="celendar-btn">
+
+              <Input className="celendar-btn" name='on' type='date' onChange={(e, value) => {}}></Input>
               <img className="celendar" src={Icon14} alt=""/>
-            </button>
+
             <input
               className="star"
               type="checkbox"
