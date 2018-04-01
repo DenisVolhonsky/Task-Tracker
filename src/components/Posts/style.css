@@ -1,10 +1,31 @@
+.done {
+    width: 4%;
+    position: absolute;
+    left: -38px;
+}
+
+
+.garb {
+    width: 3%;
+    position: absolute;
+    right: 8px;
+}
+
+.str {
+    width: 4%;
+    position: absolute;
+    right: 38px;
+}
+
+
 .posts {
     position: relative;
     max-height: 500px;
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: -199px;
+    left: 7%;
     padding: 10px;
-    width: 27%;
+    /*width: 27%;*/
     border: 1px solid #9E9E9E;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -21,6 +42,9 @@
 .posts__link:hover {
     color: #3F51B5;
 }
+
+
+
 .posts__rating {
     font-size: 22px;
     color: #424242;
@@ -28,8 +52,9 @@
 .genre__list {
     display: flex;
     padding-left: 0;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+/*    justify-content: flex-start;
+    flex-wrap: wrap;*/
+
     list-style-type: none;
 }
 .genre__item {
