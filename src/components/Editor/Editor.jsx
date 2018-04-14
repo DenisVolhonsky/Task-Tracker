@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-import v4 from 'uuid/v4';
-import './style.css';
-import {Helpers} from 'react-materialize';
-import Icon14 from './icon-14.svg';
-import {Input} from 'react-materialize';
-import {Row} from 'react-materialize';
-import moment from 'moment';
+// should create changeble LHS-menu
+
+import React, {Component} from 'react'
+import v4 from 'uuid/v4'
+import './style.css'
+import {Helpers} from 'react-materialize'
+import Icon14 from './icon-14.svg'
+import {Input} from 'react-materialize'
+import {Row} from 'react-materialize'
+import moment from 'moment'
 
 class Editor extends Component {
 
